@@ -1,3 +1,3 @@
 Model: XGBoost
 Best params: {'classifier__learning_rate': 0.1, 'classifier__max_depth': 7, 'classifier__n_estimators': 200, 'classifier__subsample': 0.8}
-Metrics: {'accuracy': 0.937046004842615, 'precision': 0.9421487603305785, 'recall': 0.7169811320754716, 'f1': 0.8142857142857143, 'roc_auc': np.float64(0.9731737904632589)}
+Metrics: {'accuracy': 0.937046004842615, 'precision': 0.9349593495934959, 'recall': 0.7232704402515723, 'f1': 0.8156028368794326, 'roc_auc': 0.9687326148246631}
