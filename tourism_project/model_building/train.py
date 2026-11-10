@@ -163,7 +163,7 @@ def train_and_evaluate(X_train, y_train, X_test, y_test, preprocessor):
             # Log to MLflow
             mlflow.log_params(grid.best_params_)
             mlflow.log_metrics(metrics)
-            mlflow.sklearn.log_model(best, artifact_path="model")
+            mlflow.sklearn.log_model(best, name="model", serialization_format="cloudpickle")
 
             results[name] = {'best_model': best, 'metrics': metrics, 'best_params': grid.best_params_}
             print(f"      Best params: {grid.best_params_}")
