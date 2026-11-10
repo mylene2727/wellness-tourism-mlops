@@ -119,7 +119,7 @@ def train_and_evaluate(X_train, y_train, X_test, y_test, preprocessor):
     }
 
     # MLflow: point to local tracking folder
-    mlflow.set_tracking_uri("file:./mlruns")
+    mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI", "sqlite:///mlflow.db"))
     mlflow.set_experiment("wellness_tourism_purchase_prediction")
 
     cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)
